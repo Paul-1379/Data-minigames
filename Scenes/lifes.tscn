@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bciv7xlimpqlx"]
+
+[ext_resource type="Texture2D" uid="uid://cgb58nvble3c0" path="res://sprites/database-check-solid.svg" id="1_8ok18"]
+
+[node name="Lifes" type="HBoxContainer" unique_id=286877339]
+offset_left = 106.0
+offset_top = 144.0
+offset_right = 1057.0
+offset_bottom = 331.0
+
+[node name="LiveIcon" type="TextureRect" parent="." unique_id=1488903437]
+layout_mode = 2
+texture = ExtResource("1_8ok18")
+expand_mode = 2
+
+[node name="LiveIcon2" type="TextureRect" parent="." unique_id=510171929]
+layout_mode = 2
+texture = ExtResource("1_8ok18")
+expand_mode = 2
+
+[node name="LiveIcon3" type="TextureRect" parent="." unique_id=966661068]
+layout_mode = 2
+texture = ExtResource("1_8ok18")
+expand_mode = 2
+
+[node name="LiveIcon4" type="TextureRect" parent="." unique_id=1753654919]
+layout_mode = 2
+texture = ExtResource("1_8ok18")
+expand_mode = 2
+
+[node name="LiveIcon5" type="TextureRect" parent="." unique_id=379670190]
+layout_mode = 2
+texture = ExtResource("1_8ok18")
+expand_mode = 2

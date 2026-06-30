@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://vyug0nmggkl1"]
 
+[ext_resource type="Texture2D" uid="uid://db8ktjblo0qgi" path="res://sprites/terminal.jpg" id="1_iktym"]
+[ext_resource type="PackedScene" uid="uid://bciv7xlimpqlx" path="res://Scenes/lifes.tscn" id="2_vry73"]
+
 [node name="Node2D" type="Node2D" unique_id=1908555524]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1601378734]
+offset_right = 1176.0
+offset_bottom = 784.0
+texture = ExtResource("1_iktym")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1621934093]
+offset_left = 341.0
+offset_top = 508.0
+offset_right = 739.0
+offset_bottom = 586.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Level number 1"
+
+[node name="Lifes" parent="." unique_id=286877339 instance=ExtResource("2_vry73")]

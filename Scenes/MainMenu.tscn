@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cs7ram45bpbd5"]
 
-[ext_resource type="Texture2D" uid="uid://bomnefuvbqel6" path="res://background.png" id="1_tt5f1"]
+[ext_resource type="Texture2D" uid="uid://bomnefuvbqel6" path="res://sprites/background.png" id="1_tt5f1"]
 [ext_resource type="Script" uid="uid://dhugupmhda4de" path="res://Scripts/play_button.gd" id="2_8saeu"]
 [ext_resource type="Script" uid="uid://dmn46bgwhm0ti" path="res://Scripts/quit_button.gd" id="2_853f1"]
 
@@ -53,6 +53,13 @@ grow_horizontal = 2
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/normal_font_size = 70
 text = "The data analyser"
+
+[node name="Label2" type="Label" parent="." unique_id=131486084]
+offset_left = 623.0
+offset_top = 621.0
+offset_right = 1131.0
+offset_bottom = 644.0
+text = "No data has been mistreated during the developping of this game"
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="VBoxContainer/QuitButton" method="_on_pressed"]
