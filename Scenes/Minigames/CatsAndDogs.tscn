@@ -402,6 +402,7 @@
 [ext_resource type="Texture2D" uid="uid://btgpqjaguph4i" path="res://sprites/Cats and dogs images/Dogs/dog.199.jpg" id="400_uy8fn"]
 [ext_resource type="Texture2D" uid="uid://ccs6vrr865q2j" path="res://sprites/Cats and dogs images/Dogs/dog.200.jpg" id="401_0rb48"]
 [ext_resource type="PackedScene" uid="uid://bciv7xlimpqlx" path="res://Scenes/lifes.tscn" id="402_mhs03"]
+[ext_resource type="PackedScene" uid="uid://to3nqwx8fu5i" path="res://Scenes/minigame_time_left.tscn" id="403_1c422"]
 
 [node name="Node2D" type="Node2D" unique_id=720225231]
 
@@ -457,6 +458,8 @@ offset_left = 815.0
 offset_top = 545.0
 offset_right = 1116.0
 offset_bottom = 602.0
+
+[node name="MinigameTimeLeft" parent="." unique_id=1106161001 instance=ExtResource("403_1c422")]
 
 [connection signal="pressed" from="HBoxContainer/Cat button" to="cats and dogs minigame manager" method="_on_cat_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Dog button" to="cats and dogs minigame manager" method="_on_dog_button_pressed"]

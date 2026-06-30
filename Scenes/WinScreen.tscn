@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b3im3s7il0cq2"]
+
+[ext_resource type="Script" uid="uid://bpmy34u8y4skp" path="res://Scripts/WinLabel.gd" id="1_68w7f"]
+[ext_resource type="PackedScene" uid="uid://cu7rwsybch7n1" path="res://Scenes/retry_button.tscn" id="2_d8xbi"]
+
+[node name="Node2D" type="Node2D" unique_id=59182172]
+
+[node name="WinText" type="RichTextLabel" parent="." unique_id=1137664257]
+offset_left = 355.0
+offset_top = 169.0
+offset_right = 839.0
+offset_bottom = 419.0
+theme_override_font_sizes/normal_font_size = 80
+text = "You win!
+Score: "
+script = ExtResource("1_68w7f")
+
+[node name="Retry button" parent="." unique_id=1389873795 instance=ExtResource("2_d8xbi")]

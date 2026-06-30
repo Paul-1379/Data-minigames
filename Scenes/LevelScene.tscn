@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://vyug0nmggkl1"]
 
+[ext_resource type="Script" uid="uid://caya85nx1f4vf" path="res://Scripts/level_scene.gd" id="1_4qks7"]
 [ext_resource type="Texture2D" uid="uid://db8ktjblo0qgi" path="res://sprites/terminal.jpg" id="1_iktym"]
 [ext_resource type="PackedScene" uid="uid://bciv7xlimpqlx" path="res://Scenes/lifes.tscn" id="2_vry73"]
+[ext_resource type="PackedScene" uid="uid://busne2q0lsoqd" path="res://Scenes/Minigames/CatsAndDogs.tscn" id="2_y44me"]
 
 [node name="Node2D" type="Node2D" unique_id=1908555524]
+script = ExtResource("1_4qks7")
+minigames_scenes = Array[PackedScene]([ExtResource("2_y44me")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1601378734]
 offset_right = 1176.0
@@ -11,12 +15,27 @@ offset_bottom = 784.0
 texture = ExtResource("1_iktym")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1621934093]
-offset_left = 341.0
-offset_top = 508.0
-offset_right = 739.0
-offset_bottom = 586.0
+[node name="Current score" type="RichTextLabel" parent="." unique_id=150236630]
+offset_left = 92.0
+offset_top = 552.0
+offset_right = 836.0
+offset_bottom = 630.0
 theme_override_font_sizes/normal_font_size = 50
-text = "Level number 1"
+text = "Current score: 0"
+
+[node name="Minigames done number" type="RichTextLabel" parent="." unique_id=1621934093]
+offset_left = 88.0
+offset_top = 455.0
+offset_right = 832.0
+offset_bottom = 533.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Minigames done: 0/5"
 
 [node name="Lifes" parent="." unique_id=286877339 instance=ExtResource("2_vry73")]
+
+[node name="Timer" type="Timer" parent="." unique_id=1762239087]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -14,18 +14,22 @@ func new_image() -> void:
 	var animal_image = all_cats_images.pick_random() if is_cat_image else all_dogs_images.pick_random()
 	$"../Image".texture = animal_image
 
+func new_correct_answer() -> void:
+	correct_answer += 1
+	$"../MinigameTimeLeft".current_score = correct_answer
+	$"../Number of correct answer".text = "correct answers: " + str(correct_answer)
+	
+
 func _on_cat_button_pressed() -> void:
 	if is_cat_image:
 		new_correct_answer()
 	else:
 		Global.life_lost()
 	new_image()
-func new_correct_answer() -> void:
-	correct_answer += 1
-	$"../Number of correct answer".text = "correct answers: " + str(correct_answer)
-	
 	
 func _on_dog_button_pressed() -> void:
 	if not is_cat_image:
 		new_correct_answer()
+	else:
+		Global.life_lost()
 	new_image()

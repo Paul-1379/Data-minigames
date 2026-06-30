@@ -19,6 +19,19 @@ grow_vertical = 2
 texture = ExtResource("1_tt5f1")
 expand_mode = 5
 
+[node name="Game Title" type="RichTextLabel" parent="." unique_id=1353297888]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 256.0
+offset_top = 37.0
+offset_right = 866.0
+offset_bottom = 178.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/normal_font_size = 70
+text = "The data analyser"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=262138667]
 offset_left = 439.0
 offset_top = 160.0
@@ -41,20 +54,7 @@ theme_override_font_sizes/font_size = 42
 text = "Quit game"
 script = ExtResource("2_853f1")
 
-[node name="Label" type="RichTextLabel" parent="." unique_id=1353297888]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 256.0
-offset_top = 37.0
-offset_right = 866.0
-offset_bottom = 178.0
-grow_horizontal = 2
-theme_override_constants/outline_size = 12
-theme_override_font_sizes/normal_font_size = 70
-text = "The data analyser"
-
-[node name="Label2" type="Label" parent="." unique_id=131486084]
+[node name="no mistreated label" type="Label" parent="." unique_id=131486084]
 offset_left = 623.0
 offset_top = 621.0
 offset_right = 1131.0
