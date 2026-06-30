@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cs7ram45bpbd5"]
+
+[ext_resource type="Texture2D" uid="uid://bomnefuvbqel6" path="res://background.png" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://dhugupmhda4de" path="res://Scripts/play_button.gd" id="2_8saeu"]
+[ext_resource type="Script" uid="uid://dmn46bgwhm0ti" path="res://Scripts/quit_button.gd" id="2_853f1"]
+
+[node name="Node2D" type="Node2D" unique_id=1361795435]
+
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=560931802]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -1.0
+offset_right = 1148.0
+offset_bottom = 656.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tt5f1")
+expand_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=262138667]
+offset_left = 439.0
+offset_top = 160.0
+offset_right = 684.0
+offset_bottom = 553.0
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1910045755]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 42
+text = "Play"
+script = ExtResource("2_8saeu")
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=376975646]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 42
+text = "Quit game"
+script = ExtResource("2_853f1")
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=1353297888]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 256.0
+offset_top = 37.0
+offset_right = 866.0
+offset_bottom = 178.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/normal_font_size = 70
+text = "The data analyser"
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="VBoxContainer/QuitButton" method="_on_pressed"]
