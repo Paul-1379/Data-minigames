@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://b1qxxyww4wc2k"]
+
+[ext_resource type="Script" uid="uid://bn538frhollil" path="res://Scripts/colored_text_minigame.gd" id="1_05jsw"]
+[ext_resource type="PackedScene" uid="uid://bciv7xlimpqlx" path="res://Scenes/lifes.tscn" id="402_46xru"]
+[ext_resource type="PackedScene" uid="uid://to3nqwx8fu5i" path="res://Scenes/minigame_time_left.tscn" id="403_fwgi7"]
+
+[node name="Node2D" type="Node2D" unique_id=720225231]
+
+[node name="Colored text minigame" type="Node2D" parent="." unique_id=95098842 node_paths=PackedStringArray("colorRectButtons")]
+script = ExtResource("1_05jsw")
+text_color = Array[String](["Rouge", "Bleu", "Jaune", "Vert", "Rose", "Violet", "Orange"])
+colors = Array[Color]([Color(0.72156864, 0, 0, 1), Color(0.11491955, 0.4391017, 0.6075204, 1), Color(0.87, 0.84622, 0.15660001, 1), Color(0.25739998, 0.78, 0.28352994, 1), Color(0.9297335, 0.35145465, 0.57563114, 1), Color(0.4653505, 0.20788407, 0.7421311, 1), Color(0.91, 0.50095505, 0.1183, 1)])
+colorRectButtons = [NodePath("../HBoxContainer/ColorRect0"), NodePath("../HBoxContainer/ColorRect1"), NodePath("../HBoxContainer/ColorRect2")]
+
+[node name="Minigame title" type="RichTextLabel" parent="." unique_id=1989278555]
+offset_left = 426.0
+offset_top = 21.0
+offset_right = 727.0
+offset_bottom = 89.0
+bbcode_enabled = true
+text = "[font_size=40]Colo[color=#1864C7]red[/color] text"
+
+[node name="Main text" type="RichTextLabel" parent="." unique_id=325296925]
+offset_left = 414.0
+offset_top = 231.0
+offset_right = 715.0
+offset_bottom = 335.0
+bbcode_enabled = true
+text = "[center][font_size=60]Noir"
+
+[node name="Number of correct answer" type="Label" parent="." unique_id=1446322562]
+offset_left = 11.0
+offset_top = 227.0
+offset_right = 275.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 30
+text = "correct answers: 0"
+
+[node name="Lifes" parent="." unique_id=286877339 instance=ExtResource("402_46xru")]
+offset_left = 815.0
+offset_top = 545.0
+offset_right = 1116.0
+offset_bottom = 602.0
+
+[node name="MinigameTimeLeft" parent="." unique_id=1106161001 instance=ExtResource("403_fwgi7")]
+
+[node name="Label" type="Label" parent="." unique_id=876049944]
+offset_left = 413.0
+offset_top = 370.0
+offset_right = 686.0
+offset_bottom = 393.0
+text = "Which color the word is describing?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1164044767]
+offset_left = 278.0
+offset_top = 410.0
+offset_right = 765.0
+offset_bottom = 539.0
+alignment = 1
+
+[node name="ColorRect0" type="ColorRect" parent="HBoxContainer" unique_id=1957340149]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="left button" type="Button" parent="HBoxContainer/ColorRect0" unique_id=249321539]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect1" type="ColorRect" parent="HBoxContainer" unique_id=604548712]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="middle button" type="Button" parent="HBoxContainer/ColorRect1" unique_id=2005173298]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=1914028950]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="right button" type="Button" parent="HBoxContainer/ColorRect2" unique_id=1872842128]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="HBoxContainer/ColorRect0/left button" to="Colored text minigame" method="_on_left_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ColorRect1/middle button" to="Colored text minigame" method="_on_middle_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ColorRect2/right button" to="Colored text minigame" method="_on_right_button_pressed"]

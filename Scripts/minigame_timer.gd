@@ -1,9 +1,9 @@
 extends Label
 
-var current_score
+var current_score = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	text = "Time left: " + str(snappedf($Timer.time_left, 0.1))
 
 

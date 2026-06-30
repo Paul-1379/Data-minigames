@@ -4,7 +4,7 @@ extends HBoxContainer
 
 var current_lives_count_displayed
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Global.lives != current_lives_count_displayed:
 		current_lives_count_displayed = Global.lives
 		var i = 0
