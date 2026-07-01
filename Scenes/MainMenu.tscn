@@ -1,23 +1,12 @@
 [gd_scene format=3 uid="uid://cs7ram45bpbd5"]
 
-[ext_resource type="Texture2D" uid="uid://bomnefuvbqel6" path="res://sprites/background.png" id="1_tt5f1"]
+[ext_resource type="PackedScene" uid="uid://dreaof1jme3sl" path="res://Scenes/background_image.tscn" id="1_8saeu"]
 [ext_resource type="Script" uid="uid://dhugupmhda4de" path="res://Scripts/play_button.gd" id="2_8saeu"]
 [ext_resource type="Script" uid="uid://dmn46bgwhm0ti" path="res://Scripts/quit_button.gd" id="2_853f1"]
 
 [node name="Node2D" type="Node2D" unique_id=1361795435]
 
-[node name="BackgroundImage" type="TextureRect" parent="." unique_id=560931802]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -5.0
-offset_top = -1.0
-offset_right = 1148.0
-offset_bottom = 656.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_tt5f1")
-expand_mode = 5
+[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("1_8saeu")]
 
 [node name="Game Title" type="RichTextLabel" parent="." unique_id=1353297888]
 anchors_preset = 5
@@ -25,7 +14,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 256.0
 offset_top = 37.0
-offset_right = 866.0
+offset_right = 927.0
 offset_bottom = 178.0
 grow_horizontal = 2
 theme_override_constants/outline_size = 12
@@ -55,10 +44,10 @@ text = "Quit game"
 script = ExtResource("2_853f1")
 
 [node name="no mistreated label" type="Label" parent="." unique_id=131486084]
-offset_left = 623.0
-offset_top = 621.0
-offset_right = 1131.0
-offset_bottom = 644.0
+offset_left = 585.0
+offset_top = 618.0
+offset_right = 1139.0
+offset_bottom = 641.0
 text = "No data has been mistreated during the developping of this game"
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_pressed"]

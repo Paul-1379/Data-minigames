@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bciv7xlimpqlx"]
 
-[ext_resource type="Texture2D" uid="uid://cgb58nvble3c0" path="res://sprites/database-check-solid.svg" id="1_8ok18"]
 [ext_resource type="Script" uid="uid://c76extyp86bio" path="res://Scripts/lives.gd" id="1_mwufe"]
+[ext_resource type="Texture2D" uid="uid://21ul5ytry72s" path="res://sprites/data.svg" id="2_mwufe"]
 
 [node name="Lives" type="HBoxContainer" unique_id=286877339 node_paths=PackedStringArray("livesIcons")]
 offset_left = 106.0
@@ -13,25 +13,25 @@ livesIcons = [NodePath("LifeIcon"), NodePath("LifeIcon2"), NodePath("LifeIcon3")
 
 [node name="LifeIcon" type="TextureRect" parent="." unique_id=1488903437]
 layout_mode = 2
-texture = ExtResource("1_8ok18")
+texture = ExtResource("2_mwufe")
 expand_mode = 2
 
 [node name="LifeIcon2" type="TextureRect" parent="." unique_id=913064062]
 layout_mode = 2
-texture = ExtResource("1_8ok18")
+texture = ExtResource("2_mwufe")
 expand_mode = 2
 
 [node name="LifeIcon3" type="TextureRect" parent="." unique_id=858451152]
 layout_mode = 2
-texture = ExtResource("1_8ok18")
+texture = ExtResource("2_mwufe")
 expand_mode = 2
 
 [node name="LifeIcon4" type="TextureRect" parent="." unique_id=383315883]
 layout_mode = 2
-texture = ExtResource("1_8ok18")
+texture = ExtResource("2_mwufe")
 expand_mode = 2
 
 [node name="LifeIcon5" type="TextureRect" parent="." unique_id=1468196292]
 layout_mode = 2
-texture = ExtResource("1_8ok18")
+texture = ExtResource("2_mwufe")
 expand_mode = 2

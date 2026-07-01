@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgb58nvble3c0"
-path="res://.godot/imported/database-check-solid.svg-33f2cdd0a0589855aeec2584e1334f47.ctex"
+uid="uid://cotruydywgfhv"
+path="res://.godot/imported/blured background.jpg-bd33e88b9c8edb20e5532b34cbb353ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/database-check-solid.svg"
-dest_files=["res://.godot/imported/database-check-solid.svg-33f2cdd0a0589855aeec2584e1334f47.ctex"]
+source_file="res://sprites/blured background.jpg"
+dest_files=["res://.godot/imported/blured background.jpg-bd33e88b9c8edb20e5532b34cbb353ca.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=10.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

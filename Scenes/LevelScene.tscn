@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://vyug0nmggkl1"]
 
 [ext_resource type="Script" uid="uid://caya85nx1f4vf" path="res://Scripts/level_scene.gd" id="1_4qks7"]
-[ext_resource type="Texture2D" uid="uid://db8ktjblo0qgi" path="res://sprites/terminal.jpg" id="1_iktym"]
 [ext_resource type="PackedScene" uid="uid://bciv7xlimpqlx" path="res://Scenes/lifes.tscn" id="2_vry73"]
 [ext_resource type="PackedScene" uid="uid://busne2q0lsoqd" path="res://Scenes/Minigames/CatsAndDogs.tscn" id="2_y44me"]
 [ext_resource type="PackedScene" uid="uid://b1qxxyww4wc2k" path="res://Scenes/Minigames/ColoredText.tscn" id="3_rac3m"]
+[ext_resource type="Texture2D" uid="uid://cotruydywgfhv" path="res://sprites/blured background.jpg" id="5_albaa"]
+[ext_resource type="PackedScene" uid="uid://dreaof1jme3sl" path="res://Scenes/background_image.tscn" id="5_rac3m"]
 
 [node name="Node2D" type="Node2D" unique_id=1908555524]
 script = ExtResource("1_4qks7")
 minigames_scenes = Array[PackedScene]([ExtResource("2_y44me"), ExtResource("3_rac3m")])
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1601378734]
-offset_right = 1176.0
-offset_bottom = 784.0
-texture = ExtResource("1_iktym")
-expand_mode = 1
+[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("5_rac3m")]
+offset_left = -2.0
+offset_right = 1155.0
+texture = ExtResource("5_albaa")
 
 [node name="Current score" type="RichTextLabel" parent="." unique_id=150236630]
 offset_left = 92.0

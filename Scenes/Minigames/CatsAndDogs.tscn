@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://busne2q0lsoqd"]
 
 [ext_resource type="Script" uid="uid://0uwsycf0gwo0" path="res://Scripts/animal_minigame.gd" id="1_1527r"]
+[ext_resource type="PackedScene" uid="uid://dreaof1jme3sl" path="res://Scenes/background_image.tscn" id="1_nm3by"]
 [ext_resource type="Texture2D" uid="uid://d12sy6l6f2n1j" path="res://sprites/Cats and dogs images/Cats/cat.1.jpg" id="2_mhs03"]
+[ext_resource type="Texture2D" uid="uid://cotruydywgfhv" path="res://sprites/blured background.jpg" id="2_qa3eo"]
 [ext_resource type="Texture2D" uid="uid://co2jeow66supj" path="res://sprites/Cats and dogs images/Cats/cat.2.jpg" id="3_rdac7"]
 [ext_resource type="Texture2D" uid="uid://byhc4yn8vxlwl" path="res://sprites/Cats and dogs images/Cats/cat.3.jpg" id="4_gvjq0"]
 [ext_resource type="Texture2D" uid="uid://7ex22pqc2cdb" path="res://sprites/Cats and dogs images/Cats/cat.4.jpg" id="5_ly31o"]
@@ -404,7 +406,16 @@
 [ext_resource type="PackedScene" uid="uid://bciv7xlimpqlx" path="res://Scenes/lifes.tscn" id="402_mhs03"]
 [ext_resource type="PackedScene" uid="uid://to3nqwx8fu5i" path="res://Scenes/minigame_time_left.tscn" id="403_1c422"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0203o"]
+bg_color = Color(0.12156863, 0.2784314, 0.18431373, 0.3137255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u66bt"]
+bg_color = Color(0.1232, 0.28, 0.18592001, 0.3137255)
+
 [node name="Node2D" type="Node2D" unique_id=720225231]
+
+[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("1_nm3by")]
+texture = ExtResource("2_qa3eo")
 
 [node name="cats and dogs minigame manager" type="Node2D" parent="." unique_id=95098842]
 script = ExtResource("1_1527r")
@@ -430,19 +441,23 @@ stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1686336055]
 offset_left = 94.0
-offset_top = 440.0
-offset_right = 760.0
+offset_top = 427.0
+offset_right = 741.0
 offset_bottom = 608.0
 alignment = 1
 
 [node name="Cat button" type="Button" parent="HBoxContainer" unique_id=1262866207]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.52675045, 0.35305724, 0.91656375, 1)
 theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_0203o")
 text = "It is a cat!"
 
 [node name="Dog button" type="Button" parent="HBoxContainer" unique_id=1653734248]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.84089077, 0.9392372, 0, 1)
 theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_u66bt")
 text = "It is a dog!"
 
 [node name="Number of correct answer" type="Label" parent="." unique_id=1446322562]

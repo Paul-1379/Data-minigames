@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dreaof1jme3sl"]
+
+[ext_resource type="Texture2D" uid="uid://ba3fbeuvwsh8y" path="res://sprites/Background.png" id="1_lnvxq"]
+
+[node name="BackgroundImage" type="TextureRect" unique_id=2023635128]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1156.0
+offset_bottom = 649.53125
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lnvxq")
+expand_mode = 5
+stretch_mode = 5

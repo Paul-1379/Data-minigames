@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://b1qxxyww4wc2k"]
 
 [ext_resource type="Script" uid="uid://bn538frhollil" path="res://Scripts/colored_text_minigame.gd" id="1_05jsw"]
+[ext_resource type="PackedScene" uid="uid://dreaof1jme3sl" path="res://Scenes/background_image.tscn" id="1_n8r6j"]
+[ext_resource type="Texture2D" uid="uid://cotruydywgfhv" path="res://sprites/blured background.jpg" id="2_dr20i"]
 [ext_resource type="PackedScene" uid="uid://bciv7xlimpqlx" path="res://Scenes/lifes.tscn" id="402_46xru"]
 [ext_resource type="PackedScene" uid="uid://to3nqwx8fu5i" path="res://Scenes/minigame_time_left.tscn" id="403_fwgi7"]
 
 [node name="Node2D" type="Node2D" unique_id=720225231]
 
+[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("1_n8r6j")]
+texture = ExtResource("2_dr20i")
+
 [node name="Colored text minigame" type="Node2D" parent="." unique_id=95098842 node_paths=PackedStringArray("colorRectButtons")]
 script = ExtResource("1_05jsw")
-text_color = Array[String](["Rouge", "Bleu", "Jaune", "Vert", "Rose", "Violet", "Orange"])
+text_color = Array[String](["Red", "Blue", "Yellow", "Green", "Pink", "Purple", "Orange"])
 colors = Array[Color]([Color(0.72156864, 0, 0, 1), Color(0.11491955, 0.4391017, 0.6075204, 1), Color(0.87, 0.84622, 0.15660001, 1), Color(0.25739998, 0.78, 0.28352994, 1), Color(0.9297335, 0.35145465, 0.57563114, 1), Color(0.4653505, 0.20788407, 0.7421311, 1), Color(0.91, 0.50095505, 0.1183, 1)])
 colorRectButtons = [NodePath("../HBoxContainer/ColorRect0"), NodePath("../HBoxContainer/ColorRect1"), NodePath("../HBoxContainer/ColorRect2")]
 
@@ -26,7 +31,7 @@ offset_top = 231.0
 offset_right = 715.0
 offset_bottom = 335.0
 bbcode_enabled = true
-text = "[center][font_size=60]Noir"
+text = "[center][font_size=60]Red"
 
 [node name="Number of correct answer" type="Label" parent="." unique_id=1446322562]
 offset_left = 11.0
