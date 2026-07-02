@@ -412,7 +412,7 @@ bg_color = Color(0.12156863, 0.2784314, 0.18431373, 0.3137255)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u66bt"]
 bg_color = Color(0.1232, 0.28, 0.18592001, 0.3137255)
 
-[node name="Node2D" type="Node2D" unique_id=720225231]
+[node name="Node2D2" type="Node2D" unique_id=720225231]
 
 [node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("1_nm3by")]
 texture = ExtResource("2_qa3eo")
@@ -451,6 +451,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.52675045, 0.35305724, 0.91656375, 1)
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_0203o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0203o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0203o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0203o")
 text = "It is a cat!"
 
 [node name="Dog button" type="Button" parent="HBoxContainer" unique_id=1653734248]
@@ -458,6 +461,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.84089077, 0.9392372, 0, 1)
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_u66bt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u66bt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "It is a dog!"
 
 [node name="Number of correct answer" type="Label" parent="." unique_id=1446322562]
