@@ -1,20 +1,21 @@
 [gd_scene format=3 uid="uid://d25kh4rqu1bbh"]
 
 [ext_resource type="PackedScene" uid="uid://cu7rwsybch7n1" path="res://Scenes/retry_button.tscn" id="1_5xr08"]
+[ext_resource type="PackedScene" uid="uid://csif4x0txjspe" path="res://Scenes/end_text.tscn" id="2_cjg3j"]
+[ext_resource type="PackedScene" uid="uid://dreaof1jme3sl" path="res://Scenes/background_image.tscn" id="3_kbj3i"]
+[ext_resource type="Texture2D" uid="uid://cotruydywgfhv" path="res://sprites/blured background.jpg" id="4_hvs1g"]
 
 [node name="Node2D" type="Node2D" unique_id=225603322]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=747172083]
-offset_left = 267.0
-offset_top = 224.0
-offset_right = 899.0
-offset_bottom = 374.0
-theme_override_constants/outline_size = 30
-theme_override_font_sizes/normal_font_size = 100
-text = "You are ded"
+[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("3_kbj3i")]
+texture = ExtResource("4_hvs1g")
 
 [node name="Retry button" parent="." unique_id=1389873795 instance=ExtResource("1_5xr08")]
 offset_left = 489.0
 offset_top = 487.0
 offset_right = 600.0
 offset_bottom = 550.0
+
+[node name="EndText" parent="." unique_id=1609695829 instance=ExtResource("2_cjg3j")]
+text = "===================================================================GAME_OVER========================================GAME_OVER=========================================================================GAME_OVER===================================================GAME_OVER===================================================GAME_OVER========================================================================================================================================GAME_OVER=====================================================================GAME_OVER============GAME_OVER===========================================================================GAME_OVER=============================================================================GAME_OVER====================GAME_OVER====================================================================================================GAME_OVER=========================================================================================================================="
+fit_content = true

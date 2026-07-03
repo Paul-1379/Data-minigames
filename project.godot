@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="MiniGamesCompilation"
+config/name="Data minigames"
 run/main_scene="uid://cs7ram45bpbd5"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"

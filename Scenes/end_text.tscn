@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://csif4x0txjspe"]
+
+[ext_resource type="FontFile" uid="uid://cl4uuitgoq4ft" path="res://Font/Space_Mono/SpaceMono-Regular.ttf" id="1_0hkua"]
+[ext_resource type="Script" uid="uid://cl2ag4y3n1lwc" path="res://Scripts/end_text_animation.gd" id="2_jigl0"]
+
+[sub_resource type="Animation" id="Animation_fy21p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:probability")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_82r0j"]
+resource_name = "text_anim"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:probability")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fy21p"]
+_data = {
+&"RESET": SubResource("Animation_fy21p"),
+&"text_anim": SubResource("Animation_82r0j")
+}
+
+[node name="EndText" type="RichTextLabel" unique_id=1609695829]
+offset_left = 107.0
+offset_top = 82.0
+offset_right = 1056.0
+offset_bottom = 503.0
+theme_override_fonts/normal_font = ExtResource("1_0hkua")
+theme_override_fonts/mono_font = ExtResource("1_0hkua")
+theme_override_font_sizes/normal_font_size = 20
+text = "===================================================================YOU_LOSED========================================YOU_LOSED=========================================================================YOU_LOSED===================================================YOU_LOSED===================================================YOU_LOSED========================================================================================================================================YOU_LOSED=====================================================================YOU_LOSED============YOU_LOSED===========================================================================YOU_LOSED=============================================================================YOU_LOSED====================YOU_LOSED====================================================================================================YOU_LOSED=========================================================================================================================="
+script = ExtResource("2_jigl0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1924609589]
+libraries/ = SubResource("AnimationLibrary_fy21p")
+autoplay = &"text_anim"

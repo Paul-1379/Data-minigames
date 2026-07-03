@@ -1,18 +1,16 @@
 [gd_scene format=3 uid="uid://b3im3s7il0cq2"]
 
-[ext_resource type="Script" uid="uid://bpmy34u8y4skp" path="res://Scripts/WinLabel.gd" id="1_68w7f"]
 [ext_resource type="PackedScene" uid="uid://cu7rwsybch7n1" path="res://Scenes/retry_button.tscn" id="2_d8xbi"]
+[ext_resource type="PackedScene" uid="uid://csif4x0txjspe" path="res://Scenes/end_text.tscn" id="3_fy21p"]
+[ext_resource type="PackedScene" uid="uid://dreaof1jme3sl" path="res://Scenes/background_image.tscn" id="4_douls"]
+[ext_resource type="Texture2D" uid="uid://cotruydywgfhv" path="res://sprites/blured background.jpg" id="5_6qhgi"]
 
 [node name="Node2D" type="Node2D" unique_id=59182172]
 
-[node name="WinText" type="RichTextLabel" parent="." unique_id=1137664257]
-offset_left = 355.0
-offset_top = 169.0
-offset_right = 839.0
-offset_bottom = 419.0
-theme_override_font_sizes/normal_font_size = 80
-text = "You win!
-Score: "
-script = ExtResource("1_68w7f")
+[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("4_douls")]
+texture = ExtResource("5_6qhgi")
+
+[node name="EndText" parent="." unique_id=1609695829 instance=ExtResource("3_fy21p")]
+take_text = false
 
 [node name="Retry button" parent="." unique_id=1389873795 instance=ExtResource("2_d8xbi")]
