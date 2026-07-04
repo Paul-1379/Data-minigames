@@ -15,58 +15,115 @@ corner_radius_bottom_left = 85
 
 [node name="Node2D" type="Node2D" unique_id=720225231]
 
-[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("1_528vx")]
+[node name="Container" type="Control" parent="." unique_id=480856305]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1932.0319
+offset_bottom = 1085.0
+
+[node name="BackgroundImage" parent="Container" unique_id=2023635128 instance=ExtResource("1_528vx")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 texture = ExtResource("2_wue2n")
 
-[node name="Different color minigame" type="Node2D" parent="." unique_id=95098842]
+[node name="Different color minigame" type="Node2D" parent="Container" unique_id=95098842]
+position = Vector2(1, 3.53125)
 script = ExtResource("3_oekyc")
 
-[node name="Label" type="Label" parent="." unique_id=1072711156]
-offset_left = 462.0
-offset_top = 157.0
-offset_right = 766.0
-offset_bottom = 180.0
+[node name="Label" type="Label" parent="Container" unique_id=1072711156]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.99994
+offset_top = -190.73438
+offset_right = 151.99994
+offset_bottom = -167.73438
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
 text = "Click on the different color!"
+horizontal_alignment = 1
 
-[node name="Minigame title" type="RichTextLabel" parent="." unique_id=1989278555]
-offset_left = 426.0
-offset_top = 21.0
-offset_right = 843.0
-offset_bottom = 89.0
+[node name="Minigame title" type="RichTextLabel" parent="Container" unique_id=1989278555]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -208.49994
+offset_top = 116.53125
+offset_right = 208.49994
+offset_bottom = 184.53125
+grow_horizontal = 2
 bbcode_enabled = true
 text = "[font_size=40]The different color"
 
-[node name="Number of correct answer" type="Label" parent="." unique_id=1446322562]
-offset_left = 11.0
-offset_top = 227.0
-offset_right = 275.0
-offset_bottom = 286.0
+[node name="Number of correct answer" type="Label" parent="Container" unique_id=1446322562]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 148.0
+offset_top = -29.5
+offset_right = 444.0
+offset_bottom = 29.5
+grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "correct answers: 0"
 
-[node name="Lifes" parent="." unique_id=286877339 instance=ExtResource("404_ok7hw")]
-offset_left = 815.0
-offset_top = 545.0
-offset_right = 1116.0
-offset_bottom = 602.0
-
-[node name="MinigameTimeLeft" parent="." unique_id=1106161001 instance=ExtResource("405_03fcr")]
-
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1152865000]
-anchors_preset = 15
+[node name="Lifes" parent="Container" unique_id=286877339 instance=ExtResource("404_ok7hw")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 450.0
-offset_top = 215.0
-offset_right = 769.0
-offset_bottom = 540.0
+offset_left = -410.03186
+offset_top = -143.0
+offset_right = -109.03186
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MinigameTimeLeft" parent="Container" unique_id=1106161001 instance=ExtResource("405_03fcr")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -428.03186
+offset_top = -28.5
+offset_right = -145.03186
+offset_bottom = 28.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Container" unique_id=1152865000]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.492
+offset_top = -141.73438
+offset_right = 223.492
+offset_bottom = 313.65698
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 4
 
-[node name="Color button" type="Button" parent="GridContainer" unique_id=1653734248 groups=["color_buttons"]]
+[node name="Color button" type="Button" parent="Container/GridContainer" unique_id=1653734248 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -78,7 +135,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button2" type="Button" parent="GridContainer" unique_id=1594153412 groups=["color_buttons"]]
+[node name="Color button2" type="Button" parent="Container/GridContainer" unique_id=1594153412 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -90,7 +147,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/focus = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button3" type="Button" parent="GridContainer" unique_id=1098429418 groups=["color_buttons"]]
+[node name="Color button3" type="Button" parent="Container/GridContainer" unique_id=1098429418 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -102,7 +159,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button4" type="Button" parent="GridContainer" unique_id=1345824617 groups=["color_buttons"]]
+[node name="Color button4" type="Button" parent="Container/GridContainer" unique_id=1345824617 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -114,7 +171,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button5" type="Button" parent="GridContainer" unique_id=1073897591 groups=["color_buttons"]]
+[node name="Color button5" type="Button" parent="Container/GridContainer" unique_id=1073897591 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -126,7 +183,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button6" type="Button" parent="GridContainer" unique_id=2012574996 groups=["color_buttons"]]
+[node name="Color button6" type="Button" parent="Container/GridContainer" unique_id=2012574996 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -138,7 +195,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button7" type="Button" parent="GridContainer" unique_id=359189784 groups=["color_buttons"]]
+[node name="Color button7" type="Button" parent="Container/GridContainer" unique_id=359189784 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -150,7 +207,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button8" type="Button" parent="GridContainer" unique_id=517410095 groups=["color_buttons"]]
+[node name="Color button8" type="Button" parent="Container/GridContainer" unique_id=517410095 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -162,7 +219,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button9" type="Button" parent="GridContainer" unique_id=361910641 groups=["color_buttons"]]
+[node name="Color button9" type="Button" parent="Container/GridContainer" unique_id=361910641 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -174,7 +231,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button10" type="Button" parent="GridContainer" unique_id=193979504 groups=["color_buttons"]]
+[node name="Color button10" type="Button" parent="Container/GridContainer" unique_id=193979504 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -186,7 +243,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button11" type="Button" parent="GridContainer" unique_id=1896272150 groups=["color_buttons"]]
+[node name="Color button11" type="Button" parent="Container/GridContainer" unique_id=1896272150 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -198,7 +255,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button12" type="Button" parent="GridContainer" unique_id=988052111 groups=["color_buttons"]]
+[node name="Color button12" type="Button" parent="Container/GridContainer" unique_id=988052111 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -210,7 +267,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button13" type="Button" parent="GridContainer" unique_id=100490565 groups=["color_buttons"]]
+[node name="Color button13" type="Button" parent="Container/GridContainer" unique_id=100490565 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -222,7 +279,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button14" type="Button" parent="GridContainer" unique_id=2136862966 groups=["color_buttons"]]
+[node name="Color button14" type="Button" parent="Container/GridContainer" unique_id=2136862966 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -234,7 +291,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button15" type="Button" parent="GridContainer" unique_id=1281740463 groups=["color_buttons"]]
+[node name="Color button15" type="Button" parent="Container/GridContainer" unique_id=1281740463 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -246,7 +303,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[node name="Color button16" type="Button" parent="GridContainer" unique_id=2059933257 groups=["color_buttons"]]
+[node name="Color button16" type="Button" parent="Container/GridContainer" unique_id=2059933257 groups=["color_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -258,4 +315,4 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "   "
 
-[connection signal="pressed" from="GridContainer/Color button" to="Different color minigame" method="_on_dog_button_pressed"]
+[connection signal="pressed" from="Container/GridContainer/Color button" to="Container/Different color minigame" method="_on_dog_button_pressed"]

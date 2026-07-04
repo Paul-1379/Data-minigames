@@ -7,10 +7,47 @@
 
 [node name="Node2D" type="Node2D" unique_id=59182172]
 
-[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("4_douls")]
+[node name="Container" type="Control" parent="." unique_id=612766451]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1932.0319
+offset_bottom = 1085.0
+
+[node name="BackgroundImage" parent="Container" unique_id=2023635128 instance=ExtResource("4_douls")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 texture = ExtResource("5_6qhgi")
 
-[node name="EndText" parent="." unique_id=1609695829 instance=ExtResource("3_fy21p")]
+[node name="EndText" parent="Container" unique_id=1609695829 instance=ExtResource("3_fy21p")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -474.49997
+offset_top = -335.73438
+offset_right = 474.49994
+offset_bottom = 85.265625
+grow_horizontal = 2
+grow_vertical = 2
 take_text = false
 
-[node name="Retry button" parent="." unique_id=1389873795 instance=ExtResource("2_d8xbi")]
+[node name="Retry button" parent="Container" unique_id=1389873795 instance=ExtResource("2_d8xbi")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.00006
+offset_top = -181.0
+offset_right = 58.99994
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 0

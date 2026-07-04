@@ -7,15 +7,48 @@
 
 [node name="Node2D" type="Node2D" unique_id=225603322]
 
-[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("3_kbj3i")]
+[node name="Container" type="Control" parent="." unique_id=641960107]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1932.0319
+offset_bottom = 1085.0
+
+[node name="BackgroundImage" parent="Container" unique_id=2023635128 instance=ExtResource("3_kbj3i")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 texture = ExtResource("4_hvs1g")
 
-[node name="Retry button" parent="." unique_id=1389873795 instance=ExtResource("1_5xr08")]
-offset_left = 489.0
-offset_top = 487.0
-offset_right = 600.0
-offset_bottom = 550.0
+[node name="Retry button" parent="Container" unique_id=1389873795 instance=ExtResource("1_5xr08")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.00006
+offset_top = -143.0
+offset_right = 58.99994
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
 
-[node name="EndText" parent="." unique_id=1609695829 instance=ExtResource("2_cjg3j")]
+[node name="EndText" parent="Container" unique_id=1609695829 instance=ExtResource("2_cjg3j")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -474.49997
+offset_top = -304.73438
+offset_right = 474.49994
+offset_bottom = 116.265625
+grow_horizontal = 2
+grow_vertical = 2
 text = "===================================================================GAME_OVER========================================GAME_OVER=========================================================================GAME_OVER===================================================GAME_OVER===================================================GAME_OVER========================================================================================================================================GAME_OVER=====================================================================GAME_OVER============GAME_OVER===========================================================================GAME_OVER=============================================================================GAME_OVER====================GAME_OVER====================================================================================================GAME_OVER=========================================================================================================================="
 fit_content = true

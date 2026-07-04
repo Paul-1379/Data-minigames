@@ -412,41 +412,76 @@ bg_color = Color(0.12156863, 0.2784314, 0.18431373, 0.3137255)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u66bt"]
 bg_color = Color(0.1232, 0.28, 0.18592001, 0.3137255)
 
-[node name="Node2D2" type="Node2D" unique_id=720225231]
+[node name="Node2D" type="Node2D" unique_id=720225231]
 
-[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("1_nm3by")]
+[node name="Container" type="Control" parent="." unique_id=913302440]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1932.0319
+offset_bottom = 1085.0
+
+[node name="BackgroundImage" parent="Container" unique_id=2023635128 instance=ExtResource("1_nm3by")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 texture = ExtResource("2_qa3eo")
 
-[node name="cats and dogs minigame manager" type="Node2D" parent="." unique_id=95098842]
+[node name="cats and dogs minigame manager" type="Node2D" parent="Container" unique_id=95098842]
+position = Vector2(1, 3.53125)
 script = ExtResource("1_1527r")
 all_cats_images = Array[Texture]([ExtResource("2_mhs03"), ExtResource("3_rdac7"), ExtResource("4_gvjq0"), ExtResource("5_ly31o"), ExtResource("6_v5bf0"), ExtResource("7_dfow7"), ExtResource("8_na2th"), ExtResource("9_r4f0s"), ExtResource("10_6krjo"), ExtResource("11_eewnd"), ExtResource("12_1n1br"), ExtResource("13_16o11"), ExtResource("14_vjgn6"), ExtResource("15_t5y2j"), ExtResource("16_1msxn"), ExtResource("17_vnyv0"), ExtResource("18_o74ne"), ExtResource("19_3np3i"), ExtResource("20_k7nrw"), ExtResource("21_h2ibt"), ExtResource("22_twflh"), ExtResource("23_eumt6"), ExtResource("24_lj2du"), ExtResource("25_dh1yc"), ExtResource("26_mgqii"), ExtResource("27_c8x3y"), ExtResource("28_uy2i1"), ExtResource("29_nmuj5"), ExtResource("30_hbv87"), ExtResource("31_2utwd"), ExtResource("32_6l1u0"), ExtResource("33_4w4ju"), ExtResource("34_6mdrh"), ExtResource("35_2vnrq"), ExtResource("36_8he7m"), ExtResource("37_njdl8"), ExtResource("38_sa0v7"), ExtResource("39_vwrxj"), ExtResource("40_8ypjj"), ExtResource("41_hyvjv"), ExtResource("42_6m36b"), ExtResource("43_6460t"), ExtResource("44_vhsmh"), ExtResource("45_xjg1a"), ExtResource("46_1l5cl"), ExtResource("47_yqdlw"), ExtResource("48_7slvy"), ExtResource("49_mn33w"), ExtResource("50_lrxsf"), ExtResource("51_y1hdp"), ExtResource("52_7bia0"), ExtResource("53_k2tup"), ExtResource("54_degvc"), ExtResource("55_dee2p"), ExtResource("56_f3666"), ExtResource("57_gwar4"), ExtResource("58_7j2hb"), ExtResource("59_mj3ey"), ExtResource("60_p8yux"), ExtResource("61_yud0r"), ExtResource("62_s7vos"), ExtResource("63_ifyx4"), ExtResource("64_tjobu"), ExtResource("65_asutd"), ExtResource("66_glqg3"), ExtResource("67_7h44y"), ExtResource("68_w7u4d"), ExtResource("69_celfk"), ExtResource("70_bydlv"), ExtResource("71_jurt2"), ExtResource("72_64i58"), ExtResource("73_n552p"), ExtResource("74_dy7tq"), ExtResource("75_k5wmr"), ExtResource("76_ljy5t"), ExtResource("77_wis1b"), ExtResource("78_t65hq"), ExtResource("79_0metj"), ExtResource("80_dcimv"), ExtResource("81_vk4ig"), ExtResource("82_2cx7o"), ExtResource("83_2euib"), ExtResource("84_4mk8k"), ExtResource("85_kwg3v"), ExtResource("86_byklk"), ExtResource("87_pee7a"), ExtResource("88_rlne0"), ExtResource("89_0yy3x"), ExtResource("90_ylb18"), ExtResource("91_hcwtm"), ExtResource("92_5goyq"), ExtResource("93_wokpe"), ExtResource("94_qi5mv"), ExtResource("95_g7tla"), ExtResource("96_ncwv7"), ExtResource("97_jyuas"), ExtResource("98_xq0o4"), ExtResource("99_sqkqu"), ExtResource("100_gs7ry"), ExtResource("101_m0cxt"), ExtResource("102_81jjg"), ExtResource("103_jpup5"), ExtResource("104_pe0lp"), ExtResource("105_e5kc0"), ExtResource("106_2mwok"), ExtResource("107_au4di"), ExtResource("108_nyhuu"), ExtResource("109_p4bvo"), ExtResource("110_f8lfv"), ExtResource("111_po6cf"), ExtResource("112_iihdn"), ExtResource("113_30ddm"), ExtResource("114_c37bu"), ExtResource("115_44k2x"), ExtResource("116_dcu4q"), ExtResource("117_og8kb"), ExtResource("118_2d0bi"), ExtResource("119_ujced"), ExtResource("120_nqrw7"), ExtResource("121_tqkq8"), ExtResource("122_v5i6m"), ExtResource("123_du345"), ExtResource("124_qqryk"), ExtResource("125_kl01h"), ExtResource("126_rfcye"), ExtResource("127_kutlb"), ExtResource("128_vgpuj"), ExtResource("129_8lx52"), ExtResource("130_nm5im"), ExtResource("131_m7lt4"), ExtResource("132_lak7s"), ExtResource("133_kra7t"), ExtResource("134_ohopj"), ExtResource("135_e6gv1"), ExtResource("136_7lbvy"), ExtResource("137_t6e8s"), ExtResource("138_f6s7i"), ExtResource("139_gai6y"), ExtResource("140_gtwq6"), ExtResource("141_11rog"), ExtResource("142_nnike"), ExtResource("143_xxiwr"), ExtResource("144_a3nhv"), ExtResource("145_exvw3"), ExtResource("146_k3a25"), ExtResource("147_septg"), ExtResource("148_juy5f"), ExtResource("149_5fgli"), ExtResource("150_xixs6"), ExtResource("151_17fah"), ExtResource("152_op5ey"), ExtResource("153_4moew"), ExtResource("154_4vm70"), ExtResource("155_kuq44"), ExtResource("156_mk2ib"), ExtResource("157_g7qqk"), ExtResource("158_akade"), ExtResource("159_0v2rm"), ExtResource("160_omw7w"), ExtResource("161_25vxk"), ExtResource("162_dc6as"), ExtResource("163_y0xfr"), ExtResource("164_x67tc"), ExtResource("165_dscy0"), ExtResource("166_augdq"), ExtResource("167_g4ntm"), ExtResource("168_8ndco"), ExtResource("169_xyf6b"), ExtResource("170_w0kfb"), ExtResource("171_oxu5b"), ExtResource("172_meekr"), ExtResource("173_dq5pp"), ExtResource("174_jrjyj"), ExtResource("175_csyrw"), ExtResource("176_xcgj4"), ExtResource("177_ok6ij"), ExtResource("178_31phi"), ExtResource("179_vqghr"), ExtResource("180_3h7og"), ExtResource("181_dgp34"), ExtResource("182_buk6s"), ExtResource("183_br5om"), ExtResource("184_01won"), ExtResource("185_ahagu"), ExtResource("186_5vuvv"), ExtResource("187_5xhls"), ExtResource("188_x6gwl"), ExtResource("189_nygw7"), ExtResource("190_6bx5q"), ExtResource("191_vajlc"), ExtResource("192_k82ev"), ExtResource("193_kufib"), ExtResource("194_hswhs"), ExtResource("195_7j8ya"), ExtResource("196_h3ibt"), ExtResource("197_c3ar2"), ExtResource("198_88rla"), ExtResource("199_ibbfw"), ExtResource("200_iirmf"), ExtResource("201_t3csk")])
 all_dogs_images = Array[Texture]([ExtResource("202_6hesc"), ExtResource("203_58xkk"), ExtResource("204_537nd"), ExtResource("205_kid2e"), ExtResource("206_76wxr"), ExtResource("207_otmlp"), ExtResource("208_nvt1d"), ExtResource("209_kg3of"), ExtResource("210_wohe2"), ExtResource("211_lpdap"), ExtResource("212_gk8go"), ExtResource("213_4k7kp"), ExtResource("214_yea3p"), ExtResource("215_2lyyt"), ExtResource("216_y55bu"), ExtResource("217_tlio2"), ExtResource("218_vra0c"), ExtResource("219_exllr"), ExtResource("220_em472"), ExtResource("221_o2uan"), ExtResource("222_wwbyx"), ExtResource("223_v4hjx"), ExtResource("224_3kymn"), ExtResource("225_6xklr"), ExtResource("226_ny3b3"), ExtResource("227_jlwrb"), ExtResource("228_wv0lu"), ExtResource("229_628t5"), ExtResource("230_stweq"), ExtResource("231_dbec0"), ExtResource("232_gys0k"), ExtResource("233_evbl6"), ExtResource("234_h67pa"), ExtResource("235_1be4l"), ExtResource("236_y543c"), ExtResource("237_kekfc"), ExtResource("238_6o5s7"), ExtResource("239_o2oie"), ExtResource("240_2xdce"), ExtResource("241_j08ue"), ExtResource("242_qein7"), ExtResource("243_kr36f"), ExtResource("244_2pk2p"), ExtResource("245_ujcef"), ExtResource("246_qnr5y"), ExtResource("247_hx7pn"), ExtResource("248_p7k0a"), ExtResource("249_iojct"), ExtResource("250_uiund"), ExtResource("251_tbnfk"), ExtResource("252_06qha"), ExtResource("253_sgv5m"), ExtResource("254_t01jq"), ExtResource("255_8pigj"), ExtResource("256_h8vhr"), ExtResource("257_pdk5y"), ExtResource("258_tne8g"), ExtResource("259_f364e"), ExtResource("260_xp6am"), ExtResource("261_6ljfa"), ExtResource("262_aca2p"), ExtResource("263_tijgw"), ExtResource("264_q3qxd"), ExtResource("265_b85ah"), ExtResource("266_md4qh"), ExtResource("267_uuald"), ExtResource("268_e524m"), ExtResource("269_17h6k"), ExtResource("270_odxii"), ExtResource("271_0jdck"), ExtResource("272_ds7aq"), ExtResource("273_rbgcw"), ExtResource("274_0d0ai"), ExtResource("275_65yfh"), ExtResource("276_7ktfb"), ExtResource("277_fndf4"), ExtResource("278_gr3lf"), ExtResource("279_snatr"), ExtResource("280_e8mi6"), ExtResource("281_758uq"), ExtResource("282_w70ko"), ExtResource("283_ftcpu"), ExtResource("284_wnqwm"), ExtResource("285_iaoen"), ExtResource("286_g1fdy"), ExtResource("287_xx8mn"), ExtResource("288_8vnes"), ExtResource("289_xggo3"), ExtResource("290_2xyjf"), ExtResource("291_5m1vq"), ExtResource("292_iw8wm"), ExtResource("293_o5xll"), ExtResource("294_yhkpi"), ExtResource("295_fflys"), ExtResource("296_ia68e"), ExtResource("297_1dykm"), ExtResource("298_minyj"), ExtResource("299_vqv3o"), ExtResource("300_slvoa"), ExtResource("301_jp5dk"), ExtResource("302_m6h1a"), ExtResource("303_wwyl6"), ExtResource("304_nb2rg"), ExtResource("305_tb1w0"), ExtResource("306_7s0q6"), ExtResource("307_4lopf"), ExtResource("308_urgk8"), ExtResource("309_bxif6"), ExtResource("310_yax46"), ExtResource("311_fumxr"), ExtResource("312_d4ioh"), ExtResource("313_s1dnr"), ExtResource("314_qjndg"), ExtResource("315_tlxgj"), ExtResource("316_wyrow"), ExtResource("317_5t6bn"), ExtResource("318_qkhkr"), ExtResource("319_vqq38"), ExtResource("320_jyetm"), ExtResource("321_cvt1s"), ExtResource("322_37uwd"), ExtResource("323_py2ym"), ExtResource("324_al18t"), ExtResource("325_3llkv"), ExtResource("326_v42kw"), ExtResource("327_3qf8y"), ExtResource("328_0aruk"), ExtResource("329_2j8wn"), ExtResource("330_v4er3"), ExtResource("331_fcqjn"), ExtResource("332_ty778"), ExtResource("333_msn1j"), ExtResource("334_34g3c"), ExtResource("335_i1vgf"), ExtResource("336_ush72"), ExtResource("337_fpa2s"), ExtResource("338_48lvh"), ExtResource("339_8tcjh"), ExtResource("340_fr8u4"), ExtResource("341_4mxno"), ExtResource("342_5v4sm"), ExtResource("343_nvhsj"), ExtResource("344_kvirh"), ExtResource("345_ked6u"), ExtResource("346_is31l"), ExtResource("347_0tnf1"), ExtResource("348_oxcnv"), ExtResource("349_lijlc"), ExtResource("350_uchoq"), ExtResource("351_18p4j"), ExtResource("352_dusba"), ExtResource("353_warnc"), ExtResource("354_6odgv"), ExtResource("355_llqww"), ExtResource("356_klwu6"), ExtResource("357_wdabn"), ExtResource("358_sdg26"), ExtResource("359_csryi"), ExtResource("360_77mpa"), ExtResource("361_a6lnb"), ExtResource("362_jn2q3"), ExtResource("363_dtmfa"), ExtResource("364_1utax"), ExtResource("365_1rdxc"), ExtResource("366_4byws"), ExtResource("367_hh4mj"), ExtResource("368_6bk2i"), ExtResource("369_l17og"), ExtResource("370_t7yvh"), ExtResource("371_qb8un"), ExtResource("372_l37xx"), ExtResource("373_27e8n"), ExtResource("374_dgrem"), ExtResource("375_g15nj"), ExtResource("376_lfpov"), ExtResource("377_cj75x"), ExtResource("378_0yhys"), ExtResource("379_tsv5h"), ExtResource("380_nryaa"), ExtResource("381_83dis"), ExtResource("382_gf5w5"), ExtResource("383_27pyd"), ExtResource("384_xrp73"), ExtResource("385_t7cdw"), ExtResource("386_oiqf0"), ExtResource("387_7spqa"), ExtResource("388_ey4bi"), ExtResource("389_n748u"), ExtResource("390_40m7h"), ExtResource("391_8i8ct"), ExtResource("392_0wxfu"), ExtResource("393_1q4us"), ExtResource("394_s4dm1"), ExtResource("395_pq4cd"), ExtResource("396_l8bxv"), ExtResource("397_gpbfo"), ExtResource("398_s0cmm"), ExtResource("399_4tabi"), ExtResource("400_uy8fn"), ExtResource("401_0rb48")])
 
-[node name="Minigame title" type="RichTextLabel" parent="." unique_id=1989278555]
-offset_left = 426.0
-offset_top = 21.0
-offset_right = 727.0
-offset_bottom = 89.0
+[node name="Minigame title" type="RichTextLabel" parent="Container" unique_id=1989278555]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.49994
+offset_top = 116.53125
+offset_right = 150.49994
+offset_bottom = 184.53125
+grow_horizontal = 2
 bbcode_enabled = true
 text = "[font_size=40][b][u]Cats[/u][/b] or [u][b]dogs[/b][/u]?"
 
-[node name="Image" type="TextureRect" parent="." unique_id=1110320802]
-offset_left = 307.0
-offset_top = 135.0
-offset_right = 821.0
-offset_bottom = 397.0
+[node name="Image" type="TextureRect" parent="Container" unique_id=1110320802]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.99997
+offset_top = -131.0
+offset_right = 256.99997
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("226_ny3b3")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1686336055]
-offset_left = 94.0
-offset_top = 427.0
-offset_right = 741.0
-offset_bottom = 608.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Container" unique_id=1686336055]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.49994
+offset_top = 194.26563
+offset_right = 323.49994
+offset_bottom = 375.26563
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 1
 
-[node name="Cat button" type="Button" parent="HBoxContainer" unique_id=1262866207]
+[node name="Cat button" type="Button" parent="Container/HBoxContainer" unique_id=1262866207]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.52675045, 0.35305724, 0.91656375, 1)
 theme_override_font_sizes/font_size = 45
@@ -456,7 +491,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0203o")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0203o")
 text = "It is a cat!"
 
-[node name="Dog button" type="Button" parent="HBoxContainer" unique_id=1653734248]
+[node name="Dog button" type="Button" parent="Container/HBoxContainer" unique_id=1653734248]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.84089077, 0.9392372, 0, 1)
 theme_override_font_sizes/font_size = 45
@@ -466,21 +501,46 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_u66bt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_u66bt")
 text = "It is a dog!"
 
-[node name="Number of correct answer" type="Label" parent="." unique_id=1446322562]
-offset_left = 11.0
-offset_top = 227.0
-offset_right = 275.0
-offset_bottom = 286.0
+[node name="Number of correct answer" type="Label" parent="Container" unique_id=1446322562]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 177.0
+offset_top = -37.734375
+offset_right = 473.0
+offset_bottom = 21.265625
+grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "correct answers: 0"
 
-[node name="Lifes" parent="." unique_id=286877339 instance=ExtResource("402_mhs03")]
-offset_left = 815.0
-offset_top = 545.0
-offset_right = 1116.0
-offset_bottom = 602.0
+[node name="Lifes" parent="Container" unique_id=286877339 instance=ExtResource("402_mhs03")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -407.03186
+offset_top = -165.0
+offset_right = -106.03186
+offset_bottom = -108.0
+grow_horizontal = 0
+grow_vertical = 0
 
-[node name="MinigameTimeLeft" parent="." unique_id=1106161001 instance=ExtResource("403_1c422")]
+[node name="MinigameTimeLeft" parent="Container" unique_id=1106161001 instance=ExtResource("403_1c422")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -369.03186
+offset_top = -33.734375
+offset_right = -86.03186
+offset_bottom = 23.265625
+grow_horizontal = 0
+grow_vertical = 2
 
-[connection signal="pressed" from="HBoxContainer/Cat button" to="cats and dogs minigame manager" method="_on_cat_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Dog button" to="cats and dogs minigame manager" method="_on_dog_button_pressed"]
+[connection signal="pressed" from="Container/HBoxContainer/Cat button" to="Container/cats and dogs minigame manager" method="_on_cat_button_pressed"]
+[connection signal="pressed" from="Container/HBoxContainer/Dog button" to="Container/cats and dogs minigame manager" method="_on_dog_button_pressed"]

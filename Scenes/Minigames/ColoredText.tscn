@@ -8,66 +8,135 @@
 
 [node name="Node2D" type="Node2D" unique_id=720225231]
 
-[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("1_n8r6j")]
+[node name="Container" type="Control" parent="." unique_id=913474045]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1932.0319
+offset_bottom = 1085.0
+
+[node name="BackgroundImage" parent="Container" unique_id=2023635128 instance=ExtResource("1_n8r6j")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 texture = ExtResource("2_dr20i")
 
-[node name="Colored text minigame" type="Node2D" parent="." unique_id=95098842 node_paths=PackedStringArray("colorRectButtons")]
+[node name="Colored text minigame" type="Node2D" parent="Container" unique_id=95098842 node_paths=PackedStringArray("colorRectButtons")]
+position = Vector2(1, 3.53125)
 script = ExtResource("1_05jsw")
 text_color = Array[String](["Red", "Blue", "Yellow", "Green", "Pink", "Purple", "Orange"])
 colors = Array[Color]([Color(0.72156864, 0, 0, 1), Color(0.11491955, 0.4391017, 0.6075204, 1), Color(0.87, 0.84622, 0.15660001, 1), Color(0.25739998, 0.78, 0.28352994, 1), Color(0.9297335, 0.35145465, 0.57563114, 1), Color(0.4653505, 0.20788407, 0.7421311, 1), Color(0.91, 0.50095505, 0.1183, 1)])
 colorRectButtons = [NodePath("../HBoxContainer/ColorRect0"), NodePath("../HBoxContainer/ColorRect1"), NodePath("../HBoxContainer/ColorRect2")]
 
-[node name="Minigame title" type="RichTextLabel" parent="." unique_id=1989278555]
-offset_left = 426.0
-offset_top = 21.0
-offset_right = 727.0
-offset_bottom = 89.0
+[node name="Minigame title" type="RichTextLabel" parent="Container" unique_id=1989278555]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.49994
+offset_top = 138.53125
+offset_right = 150.49994
+offset_bottom = 206.53125
+grow_horizontal = 2
 bbcode_enabled = true
 text = "[font_size=40]Colo[color=#1864C7]red[/color] text"
 
-[node name="Main text" type="RichTextLabel" parent="." unique_id=325296925]
-offset_left = 414.0
-offset_top = 231.0
-offset_right = 715.0
-offset_bottom = 335.0
+[node name="Main text" type="RichTextLabel" parent="Container" unique_id=325296925]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.49994
+offset_top = -105.734375
+offset_right = 150.49994
+offset_bottom = -1.734375
+grow_horizontal = 2
+grow_vertical = 2
 bbcode_enabled = true
 text = "[center][font_size=60]Red"
 
-[node name="Number of correct answer" type="Label" parent="." unique_id=1446322562]
-offset_left = 11.0
-offset_top = 227.0
-offset_right = 275.0
-offset_bottom = 286.0
+[node name="Number of correct answer" type="Label" parent="Container" unique_id=1446322562]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_top = -29.5
+offset_right = 506.0
+offset_bottom = 29.5
+grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "correct answers: 0"
 
-[node name="Lifes" parent="." unique_id=286877339 instance=ExtResource("402_46xru")]
-offset_left = 815.0
-offset_top = 545.0
-offset_right = 1116.0
-offset_bottom = 602.0
+[node name="Lifes" parent="Container" unique_id=286877339 instance=ExtResource("402_46xru")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -370.03186
+offset_top = -126.0
+offset_right = -69.03186
+offset_bottom = -69.0
+grow_horizontal = 0
+grow_vertical = 0
 
-[node name="MinigameTimeLeft" parent="." unique_id=1106161001 instance=ExtResource("403_fwgi7")]
+[node name="MinigameTimeLeft" parent="Container" unique_id=1106161001 instance=ExtResource("403_fwgi7")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -472.03186
+offset_top = -28.5
+offset_right = -189.03186
+offset_bottom = 28.5
+grow_horizontal = 0
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="." unique_id=876049944]
-offset_left = 413.0
-offset_top = 370.0
-offset_right = 686.0
-offset_bottom = 393.0
+[node name="Label" type="Label" parent="Container" unique_id=876049944]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.00006
+offset_top = 17.265625
+offset_right = 236.99994
+offset_bottom = 49.265625
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
 text = "Which color the word is describing?"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1164044767]
-offset_left = 278.0
-offset_top = 410.0
-offset_right = 765.0
-offset_bottom = 539.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Container" unique_id=1164044767]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.49994
+offset_top = 111.265625
+offset_right = 243.49994
+offset_bottom = 240.26563
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 1
 
-[node name="ColorRect0" type="ColorRect" parent="HBoxContainer" unique_id=1957340149]
+[node name="ColorRect0" type="ColorRect" parent="Container/HBoxContainer" unique_id=1957340149]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="left button" type="Button" parent="HBoxContainer/ColorRect0" unique_id=249321539]
+[node name="left button" type="Button" parent="Container/HBoxContainer/ColorRect0" unique_id=249321539]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -76,11 +145,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect1" type="ColorRect" parent="HBoxContainer" unique_id=604548712]
+[node name="ColorRect1" type="ColorRect" parent="Container/HBoxContainer" unique_id=604548712]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="middle button" type="Button" parent="HBoxContainer/ColorRect1" unique_id=2005173298]
+[node name="middle button" type="Button" parent="Container/HBoxContainer/ColorRect1" unique_id=2005173298]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -89,11 +158,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=1914028950]
+[node name="ColorRect2" type="ColorRect" parent="Container/HBoxContainer" unique_id=1914028950]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="right button" type="Button" parent="HBoxContainer/ColorRect2" unique_id=1872842128]
+[node name="right button" type="Button" parent="Container/HBoxContainer/ColorRect2" unique_id=1872842128]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -102,6 +171,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="pressed" from="HBoxContainer/ColorRect0/left button" to="Colored text minigame" method="_on_left_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/ColorRect1/middle button" to="Colored text minigame" method="_on_middle_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/ColorRect2/right button" to="Colored text minigame" method="_on_right_button_pressed"]
+[connection signal="pressed" from="Container/HBoxContainer/ColorRect0/left button" to="Container/Colored text minigame" method="_on_left_button_pressed"]
+[connection signal="pressed" from="Container/HBoxContainer/ColorRect1/middle button" to="Container/Colored text minigame" method="_on_middle_button_pressed"]
+[connection signal="pressed" from="Container/HBoxContainer/ColorRect2/right button" to="Container/Colored text minigame" method="_on_right_button_pressed"]

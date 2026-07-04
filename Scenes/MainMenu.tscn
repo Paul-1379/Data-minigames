@@ -6,49 +6,80 @@
 
 [node name="Node2D" type="Node2D" unique_id=1361795435]
 
-[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("1_8saeu")]
+[node name="Container" type="Control" parent="." unique_id=960074311]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1932.0319
+offset_bottom = 1085.0
 
-[node name="Game Title" type="RichTextLabel" parent="." unique_id=1353297888]
+[node name="BackgroundImage" parent="Container" unique_id=2023635128 instance=ExtResource("1_8saeu")]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 3.53125
+offset_right = 1.0
+offset_bottom = 3.53125
+
+[node name="Game Title" type="RichTextLabel" parent="Container" unique_id=1353297888]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 256.0
-offset_top = 37.0
-offset_right = 927.0
-offset_bottom = 178.0
+offset_left = -333.51593
+offset_top = 92.53125
+offset_right = 337.48395
+offset_bottom = 233.53125
 grow_horizontal = 2
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/normal_font_size = 70
 text = "The data analyser"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=262138667]
-offset_left = 439.0
-offset_top = 160.0
-offset_right = 684.0
-offset_bottom = 553.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Container" unique_id=262138667]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.49994
+offset_top = -196.5
+offset_right = 122.49994
+offset_bottom = 196.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 20
 alignment = 1
 
-[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1910045755]
+[node name="PlayButton" type="Button" parent="Container/VBoxContainer" unique_id=1910045755]
 layout_mode = 2
 theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 42
 text = "Play"
 script = ExtResource("2_8saeu")
 
-[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=376975646]
+[node name="QuitButton" type="Button" parent="Container/VBoxContainer" unique_id=376975646]
 layout_mode = 2
 theme_override_constants/outline_size = 16
 theme_override_font_sizes/font_size = 42
 text = "Quit game"
 script = ExtResource("2_853f1")
 
-[node name="no mistreated label" type="Label" parent="." unique_id=131486084]
-offset_left = 585.0
-offset_top = 618.0
-offset_right = 1139.0
-offset_bottom = 641.0
+[node name="no mistreated label" type="Label" parent="Container" unique_id=131486084]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -576.03186
+offset_top = -35.0
+offset_right = -22.03186
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
 text = "No data has been mistreated during the developping of this game"
 
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="VBoxContainer/QuitButton" method="_on_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/PlayButton" to="Container/VBoxContainer/PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/QuitButton" to="Container/VBoxContainer/QuitButton" method="_on_pressed"]

@@ -8,36 +8,56 @@
 [ext_resource type="Texture2D" uid="uid://cotruydywgfhv" path="res://sprites/blured background.jpg" id="5_albaa"]
 [ext_resource type="PackedScene" uid="uid://dreaof1jme3sl" path="res://Scenes/background_image.tscn" id="5_rac3m"]
 
-[node name="Node2D" type="Node2D" unique_id=1908555524]
+[node name="Node2D" type="Node2D" unique_id=1908555524 node_paths=PackedStringArray("minigames_done_text_node", "current_score_text_node")]
 script = ExtResource("1_4qks7")
 minigames_scenes = Array[PackedScene]([ExtResource("4_31h2o"), ExtResource("2_y44me"), ExtResource("3_rac3m")])
+minigames_done_text_node = NodePath("Container/Minigames done number")
+current_score_text_node = NodePath("Container/Current score")
 
-[node name="BackgroundImage" parent="." unique_id=2023635128 instance=ExtResource("5_rac3m")]
-offset_left = -2.0
-offset_right = 1155.0
+[node name="Container" type="Control" parent="." unique_id=754630699]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1932.0319
+offset_bottom = 1085.0
+
+[node name="BackgroundImage" parent="Container" unique_id=2023635128 instance=ExtResource("5_rac3m")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 texture = ExtResource("5_albaa")
 
-[node name="Current score" type="RichTextLabel" parent="." unique_id=150236630]
-offset_left = 92.0
-offset_top = 552.0
-offset_right = 836.0
-offset_bottom = 630.0
+[node name="Current score" type="RichTextLabel" parent="Container" unique_id=150236630]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 572.53125
+offset_right = 840.0
+offset_bottom = 650.53125
 theme_override_font_sizes/normal_font_size = 50
 text = "Current score: 0"
 
-[node name="Minigames done number" type="RichTextLabel" parent="." unique_id=1621934093]
-offset_left = 88.0
-offset_top = 455.0
-offset_right = 832.0
-offset_bottom = 533.0
+[node name="Minigames done number" type="RichTextLabel" parent="Container" unique_id=1621934093]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 458.53125
+offset_right = 833.0
+offset_bottom = 536.53125
 theme_override_font_sizes/normal_font_size = 50
 text = "Minigames done: 0/5"
 
-[node name="Lifes" parent="." unique_id=286877339 instance=ExtResource("2_vry73")]
+[node name="Lifes" parent="Container" unique_id=286877339 instance=ExtResource("2_vry73")]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 147.53125
+offset_right = 1058.0
+offset_bottom = 334.53125
 
-[node name="Timer" type="Timer" parent="." unique_id=1762239087]
+[node name="Timer" type="Timer" parent="Container" unique_id=1762239087]
 wait_time = 5.0
 one_shot = true
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Container/Timer" to="." method="_on_timer_timeout"]
