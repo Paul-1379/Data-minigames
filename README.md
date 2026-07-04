@@ -1,5 +1,5 @@
 # Data minigames
-A Wario ware style game, with a collections of minigames around the theme of data. You play through a series of minigames and try to maximise your score!
+A Wario ware style game, with a collection of minigames around the theme of data. You play through a series of minigames and try to maximise your score!
 
 Controls: mouse only
 # Minigames
