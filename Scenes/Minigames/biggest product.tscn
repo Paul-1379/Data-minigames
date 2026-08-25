@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://d1m42n2mwjrim"]
+
+[ext_resource type="PackedScene" uid="uid://dreaof1jme3sl" path="res://Scenes/background_image.tscn" id="1_e1ojg"]
+[ext_resource type="Texture2D" uid="uid://cotruydywgfhv" path="res://sprites/blured background.jpg" id="2_3ne8y"]
+[ext_resource type="Script" uid="uid://61d8bugapa0u" path="res://Scripts/biggest_product_miniagame.gd" id="3_e1ojg"]
+[ext_resource type="PackedScene" uid="uid://bciv7xlimpqlx" path="res://Scenes/lifes.tscn" id="4_00ye3"]
+[ext_resource type="PackedScene" uid="uid://to3nqwx8fu5i" path="res://Scenes/minigame_time_left.tscn" id="5_xh8ru"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipmrr"]
+bg_color = Color(0.06, 0.06, 0.06, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="Node2D" type="Node2D" unique_id=720225231]
+
+[node name="Container" type="Control" parent="." unique_id=480856305]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.53125
+offset_right = 1932.0319
+offset_bottom = 1085.0
+
+[node name="BackgroundImage" parent="Container" unique_id=2023635128 instance=ExtResource("1_e1ojg")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+texture = ExtResource("2_3ne8y")
+
+[node name="Biggest product minigame" type="Node2D" parent="Container" unique_id=95098842]
+position = Vector2(1, 3.53125)
+script = ExtResource("3_e1ojg")
+
+[node name="Label" type="Label" parent="Container" unique_id=1072711156]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.99994
+offset_top = -190.73438
+offset_right = 151.99994
+offset_bottom = -167.73438
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Click on the largest product!"
+horizontal_alignment = 1
+
+[node name="Minigame title" type="RichTextLabel" parent="Container" unique_id=1989278555]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -221.48407
+offset_top = 116.53125
+offset_right = 221.48407
+offset_bottom = 184.53125
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[font_size=40]The Biggest product"
+
+[node name="Number of correct answer" type="Label" parent="Container" unique_id=1446322562]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 148.0
+offset_top = -29.5
+offset_right = 444.0
+offset_bottom = 29.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "correct answers: 0"
+
+[node name="Lifes" parent="Container" unique_id=286877339 instance=ExtResource("4_00ye3")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -410.03186
+offset_top = -143.0
+offset_right = -109.03186
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MinigameTimeLeft" parent="Container" unique_id=1106161001 instance=ExtResource("5_xh8ru")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -428.03186
+offset_top = -28.5
+offset_right = -145.03186
+offset_bottom = 28.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Container" unique_id=1152865000]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.492
+offset_top = -141.73438
+offset_right = 223.492
+offset_bottom = 313.65698
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Product button" type="Button" parent="Container/GridContainer" unique_id=1653734248 groups=["product_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.84089077, 0.9392372, 0, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ipmrr")
+text = "   "
+
+[node name="Product button2" type="Button" parent="Container/GridContainer" unique_id=993283898 groups=["product_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.84089077, 0.9392372, 0, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ipmrr")
+text = "   "
+
+[node name="Product button3" type="Button" parent="Container/GridContainer" unique_id=994839030 groups=["product_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.84089077, 0.9392372, 0, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ipmrr")
+text = "   "
+
+[node name="Product button4" type="Button" parent="Container/GridContainer" unique_id=1486640306 groups=["product_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.84089077, 0.9392372, 0, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ipmrr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ipmrr")
+text = "   "

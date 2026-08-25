@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bciv7xlimpqlx"]
 
 [ext_resource type="Script" uid="uid://c76extyp86bio" path="res://Scripts/lives.gd" id="1_mwufe"]
-[ext_resource type="Texture2D" uid="uid://21ul5ytry72s" path="res://sprites/data.svg" id="2_mwufe"]
+[ext_resource type="Texture2D" uid="uid://b1tg228fup2je" path="res://sprites/hearth icon.svg" id="2_mwufe"]
 
 [node name="Lives" type="HBoxContainer" unique_id=286877339 node_paths=PackedStringArray("livesIcons")]
 offset_left = 106.0
