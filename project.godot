@@ -13,7 +13,7 @@ config_version=5
 config/name="Data minigames"
 run/main_scene="uid://cs7ram45bpbd5"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://b1tg228fup2je"
 
 [autoload]
 
